@@ -1,0 +1,26 @@
+[{
+  "id": 1,
+  "name": "shah",
+  "company": "ali baba",
+  "phone": "92212152"
+},{
+  "id": 2,
+  "name": "lam",
+  "company": "spiderman",
+  "phone": "81390099"
+},{
+  "id": 3,
+  "name": "nor",
+  "company": "roti prata",
+  "phone": "98616912"
+},{
+  "id": 4,
+  "name": "rul",
+  "company": "batman",
+  "phone": "88777846"
+},{
+  "id": 5,
+  "name": "bin",
+  "company": "supaman",
+  "phone": "98056478"
+}]
