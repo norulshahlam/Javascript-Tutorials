@@ -1,7 +1,7 @@
 /* 
 lesson is same as previous, only now we get data from external api
 
-note that not all api arre the same - some requires authenthification,  some have limilted number of requests ie 100 requests per day
+note that not all api are the same - some requires authentification,  some have limilted number of requests ie 100 requests per day
 
 and also the response is not the same - some data are wrapped in value obj so we need to use value.forEach() instead of forEach()
 */

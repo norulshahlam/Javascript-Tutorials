@@ -27,7 +27,7 @@ class Person {
 		return ageDate;
 	}
 
-	static add = (x, y) => x + y; //statuc methods
+	static add = (x, y) => x + y; //static methods
 }
 
 //object of Person typee

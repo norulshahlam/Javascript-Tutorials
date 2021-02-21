@@ -48,8 +48,6 @@ function createPost(post) {
 			} else {
 				reject('Error! something went wrong');
 			}
-
-			resolve();
 		}, 2000);
 	});
 }
@@ -63,7 +61,7 @@ function getPosts() {
 	}, 1000);
 }
 
-//when this runs, it also passes a 2nd param which will be a function in createPost()
+//when this runs, it also passes a 2nd param which will be a function in createPost(). u can also catch error
 createPost({ title: 'Post three', body: 'This is post three' }).then(getPosts).catch(function(err) {
 	console.log(err);
 });

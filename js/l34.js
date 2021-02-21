@@ -58,7 +58,7 @@ function loadData() {
 		console.log('READYSTATE', xhr.readyState);
 	};
 
-	//onLoad
+	//3. onLoad
 	xhr.onload = function() {
 		console.log('READYSTATE', xhr.readyState);
 		if (this.status === 200) {
@@ -66,7 +66,7 @@ function loadData() {
 		}
 	};
 
-	//3. send
+	//4. send
 	xhr.send();
 }
 /*
