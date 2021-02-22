@@ -1,12 +1,10 @@
-class UI
-{
-  constructor()
-  {
-    this.profile = document.getElementById('profile');
-  }
+class UI {
+	constructor() {
+		this.profile = document.getElementById('profile');
+	}
 
-  showProfile(user) {
-    this.profile.innerHTML = `
+	showProfile(user) {
+		this.profile.innerHTML = `
         <div class="card card-body">
             <div class="row">
                 <div class="col-md-3">
@@ -31,5 +29,67 @@ class UI
         <h3 class="page-heading mb-3">Latest Repos</h3>
         <div id="repos"></div>
     `;
-}
+	}
+
+    //show user repos
+    showRepos(repos)
+    {
+        let output = '';
+
+        repos.forEach(function (repo)
+        {
+            output += `
+            <div class="card card-body mb-2">
+                <div class="row">
+                    <div class="col-md-6">
+                       <a href="${repo.html_url}" target="_blank"> ${repo.name}</a>
+                    </div>
+                    <div class="col-md-6">
+                    <span class="badge badge-primary">Star: ${repo.stargazers_count}</span>
+                    <span class="badge badge-secondry">Public Gist: ${repo.watchers}</span>
+                    <span class="badge badge-success">Fork count: ${repo.forks_count}</span>
+                    </div>
+                </div>
+            </div>
+            `
+        })
+
+        document.getElementById('repos').innerHTML=output;
+    }
+
+	showAlert(message, className) {
+		//clear any remianing alert
+		this.clearAlert();
+
+		//creeate div
+		const div = document.createElement('div');
+		//add class
+		div.className = className;
+		//add text
+		div.appendChild(document.createTextNode(message));
+		//get parent
+		const container = document.querySelector('.searchContainer');
+		//get search box
+		const search = document.querySelector('.search');
+		//insert alert
+		container.insertBefore(div, search);
+		
+        //remove alert after 2 sec
+        setTimeout(() =>
+        {
+            this.clearAlert();
+        }, 2000);
+	}
+
+	//clear alert message
+	clearAlert() {
+		const currentAlert = document.querySelector('.alert');
+		if (currentAlert) {
+			currentAlert.remove();
+		}
+	}
+
+	clearProfile() {
+		this.profile.innerHTML = '';
+	}
 }
