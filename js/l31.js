@@ -1,5 +1,5 @@
 /* all about classes! 
-last lesson we learnt abt prototype and functions - ES5 
+last lesson we learnt abt prototype and function costructor - ES5. 
 now in ES6, the same concept is caled classes and objects 
 
 https://medium.com/developers-arena/javascript-classes-inheritance-and-prototype-chaining-es5-and-es6-way-4b8e9416702b

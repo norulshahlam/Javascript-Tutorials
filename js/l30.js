@@ -1,8 +1,8 @@
 /* in previous leson we create obj and assign values in 1 line
-now we create obj and later assgin values
+now we create obj first, assgin values later
 also we show 2 method to achieve this */
 
-//creeate method
+//create obj having methods
 const Person = {
 	greeting: function() {
 		return `hello there, ${this.firtName} ${this.lastName}`;
@@ -12,7 +12,7 @@ const Person = {
 	}
 };
 
-//now we create instance of the method and add more properties to it. note that the method doesnt have the below properties.
+//now we create instance of the class and add more properties to it. note that the method doesnt have the below properties.
 const mary = Object.create(Person);
 mary.firtName = 'Mary';
 mary.lastName = 'Williams';

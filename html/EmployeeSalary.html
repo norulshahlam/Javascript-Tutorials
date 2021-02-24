@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Salary Management</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-primary mb-3">
+    <div class="container">
+      <a href="#" class="navbar-brand">Employee Salary Management</a>
+    </div>
+  </nav>
+  <div class="container searchContainer">
+    <div class="search card card-body text-center">
+      <h1>Employee Salary Management</h1>
+      <p class="lead">Click on any button to perform queries</p>
+      <div class="d-flex justify-content-around">
+
+        <button id="getAll" class="rounded-pill">Retrieve all Employees</button>
+
+        <button class="rounded-pill">Upload Employees</button>
+        <button class="rounded-pill">Create Employee</button>
+        <button class="rounded-pill">Update Employee</button>
+        <button class="rounded-pill">Delete Employee</button>
+      </div>
+      <br>
+      <div class="d-flex justify-content-start">
+        <input type="text" placeholder="Enter user id" id="getOneId"><br>
+        <button id="getOne" class="rounded-pill">Retrieve single Employee</button>
+      </div>
+      <br><br>
+      <div id="show"></div>
+    </div>
+
+    <footer class="mt-5 p-3 text-center bg-light">
+      Employee Salary Management &copy;
+    </footer>
+
+
+
+
+    <!-- for bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+
+    <!-- for user js-->
+    <script src="../js/EmpSalApi.js"></script>
+    <script src="../js/EmpSal-ui.js"></script>
+    <script src="../js/EmpSal.js"></script>
+
+</body>
+
+</html>

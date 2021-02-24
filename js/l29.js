@@ -1,9 +1,12 @@
-/* we will be learning about constructor inherintance
+/* we will be learning about constructor inherintance.
 inheriting from another constr doesnt mean u inherit its prototype - use must specify to inherit proto 
 
+A constructor is a function that creates an instance of a class which is typically called an “object”. In JavaScript, a constructor gets called when you declare an object using the new keyword. The purpose of a constructor is to create an object and set values if there are any object properties present.
+
+'this' does not have a value. It is a substitute for the new object. The value of 'this' will become the new property when a new object is created.
 */
 
-//person constructor
+// constructor function with arguments
 function Person(firstName, lastName) {
 	this.firstName = firstName;
 	this.lastName = lastName;

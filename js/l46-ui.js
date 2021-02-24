@@ -31,14 +31,12 @@ class UI {
     `;
 	}
 
-    //show user repos
-    showRepos(repos)
-    {
-        let output = '';
+	//show user repos
+	showRepos(repos) {
+		let output = '';
 
-        repos.forEach(function (repo)
-        {
-            output += `
+		repos.forEach(function(repo) {
+			output += `
             <div class="card card-body mb-2">
                 <div class="row">
                     <div class="col-md-6">
@@ -51,11 +49,11 @@ class UI {
                     </div>
                 </div>
             </div>
-            `
-        })
+            `;
+		});
 
-        document.getElementById('repos').innerHTML=output;
-    }
+		document.getElementById('repos').innerHTML = output;
+	}
 
 	showAlert(message, className) {
 		//clear any remianing alert
@@ -73,12 +71,11 @@ class UI {
 		const search = document.querySelector('.search');
 		//insert alert
 		container.insertBefore(div, search);
-		
-        //remove alert after 2 sec
-        setTimeout(() =>
-        {
-            this.clearAlert();
-        }, 2000);
+
+		//remove alert after 2 sec
+		setTimeout(() => {
+			this.clearAlert();
+		}, 2000);
 	}
 
 	//clear alert message

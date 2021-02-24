@@ -46,3 +46,16 @@ function displayText(result) {
 	text.innerText = `${result} You choose ${pChoice}, Computer choose ${cChoice}`;
 	document.body.appendChild(text);
 }
+
+/************************************* */
+
+function sumOfNumbers(...numbers) {
+	let total = 0;
+	numbers.forEach((number) => {
+		total += number;
+	});
+
+	return total;
+}
+
+console.log(sumOfNumbers(8, 2, 3, 4, 5));
