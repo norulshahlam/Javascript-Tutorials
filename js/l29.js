@@ -6,7 +6,7 @@ A constructor is a function that creates an instance of a class which is typical
 'this' does not have a value. It is a substitute for the new object. The value of 'this' will become the new property when a new object is created.
 */
 
-// constructor function with arguments
+// constructor function with param
 function Person(firstName, lastName) {
 	this.firstName = firstName;
 	this.lastName = lastName;
@@ -22,7 +22,7 @@ Person.prototype.greeting = function() {
 //call greeting()
 console.log(person1.greeting());
 
-//now we create a function while inheriting Person obj
+//this is how we create another function while inheriting Person obj
 function Customer(firstName, lastName, phone, membership) {
 	Person.call(this, firstName, lastName); //how to inherit
 
@@ -30,8 +30,8 @@ function Customer(firstName, lastName, phone, membership) {
 	this.membership = membership;
 }
 
-//(a) inherit person prototype method
-Customer.prototype = Object.create(Person.prototype);
+//(a) inherit person prototype method. note that this is a Person obj, not customer
+//Customer.prototype = Object.create(Person.prototype);
 
 //(b) make cust proto return as cust obj
 Customer.prototype.constructor = Customer;

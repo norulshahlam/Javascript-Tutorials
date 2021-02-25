@@ -26,7 +26,7 @@ Person.prototype.calclulateAge = function() {
 	return Math.abs(ageDate);
 };
 
-//get full name
+//define another prototype func
 Person.prototype.getFullName = function() {
 	return `${this.firstName} ${this.lastName}`;
 };
@@ -38,6 +38,7 @@ Person.prototype.getMarried = function(newLastName) {
 
 const mary = new Person('Mary', 'Magdeleine', '12-20-1985');
 
+/* when u r calling prototype method, u can call like a normal method defined in object */
 console.log(mary);
 console.log(mary.calclulateAge());
 console.log(mary.getFullName());
@@ -47,6 +48,6 @@ console.log('\n\n******* after  marriage *******');
 mary.getMarried('Smith');
 console.log(mary.getFullName());
 
-//check for obj properties
+//however, if u check for the property of proto method, it doesnt belong to obj so it returns false
 console.log(mary.hasOwnProperty('firstName'));
 console.log(mary.hasOwnProperty('getFullName')); //false cos it is not part of person obj

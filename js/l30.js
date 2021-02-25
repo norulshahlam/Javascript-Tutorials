@@ -1,6 +1,10 @@
-/* in previous leson we create obj and assign values in 1 line
-now we create obj first, assgin values later
-also we show 2 method to achieve this */
+/* 
+in previous leson we create obj and assign values in 1 line
+now we:
+1 create obj first, assgin values later
+2. also we show 2 method to achieve this
+3. and, we will show that we can add more properties AFTER obj creation
+*/
 
 //create obj having methods
 const Person = {
@@ -12,13 +16,13 @@ const Person = {
 	}
 };
 
-//now we create instance of the class and add more properties to it. note that the method doesnt have the below properties.
+//3. now we create instance of the class and add more properties to it. note that the method doesnt have the below properties.
 const mary = Object.create(Person);
 mary.firtName = 'Mary';
 mary.lastName = 'Williams';
 mary.age = 30;
 
-//give all properties
+//show all properties
 console.log(mary);
 
 console.log(mary.greeting());

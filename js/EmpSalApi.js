@@ -8,7 +8,7 @@ class EmpSalApi {
 	async getAllUser(url) {
 		const getAllUserRes = await fetch(url);
 		const getAllUser = await getAllUserRes.json();
-		console.log(getAllUser);
+
 		return getAllUser;
 	}
 }

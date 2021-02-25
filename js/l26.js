@@ -15,9 +15,10 @@ In JavaScript, the thing called 'this' is the object that "owns" the code.
 The value of this, when used in an object, is the object itself.
 
 In a constructor function 'this' does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created.
+
+https://css-tricks.com/understanding-javascript-constructors/
 */
 
-//person constructor
 function Person(name, dob) {
 	this.name = name;
 	this.birthday = new Date(dob);
@@ -28,7 +29,10 @@ function Person(name, dob) {
 		return Math.abs(ageDate);
 	};
 }
-
+/*
+The Person constructor expects two parameters: name and dob. When the constructor is called with the new keyword, it assigns the received parameters to the name and dob property of the current instance, as shown below:
+*/
 const john = new Person('john', '12-20-1985');
+console.log(john);
 
 console.log(john.calclulateAge());
