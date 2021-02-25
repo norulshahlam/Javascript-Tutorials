@@ -1,8 +1,8 @@
 /*
 1. we will creeate xhr obj and give response of txt file content.
 2. we will also check for state at each part of the code to see the diff state (0-4). 
-3. onProgress - 3: processing request - function called periodically with information when an XMLHttpRequest before progress is 100%
-4. onload is called when progress is 100%
+	--onProgress - 3: processing request - function called periodically with information when an XMLHttpRequest before progress is 100%
+	--onload is called when progress is 100%
 5. understand the parameters in .open(method, url, async);
 
 *******************************************************
@@ -48,12 +48,12 @@ function loadData() {
 	const xhr = new XMLHttpRequest();
 	console.log('READYSTATE', xhr.readyState);
 
-	//2. open location of data
+	//2. open location of data. can b internal file or external url
 	xhr.open('GET', '../text/l34.txt', true);
 
 	console.log('READYSTATE', xhr.readyState);
 
-	//porcessing
+	//porcessing request
 	xhr.onprogress = function() {
 		console.log('READYSTATE', xhr.readyState);
 	};

@@ -1,8 +1,8 @@
 /* we will be understanding more on callback fucntions to handle asynchronous operations.
 
-In method 1, we mimic the actions of creating a blog post on a server or through an API or database.
+In method 1, we mimic the actions of creating a blog post on a server or through an API or database, while outputting it on the browser.
 
-Now in some cases the server may return the post before your new post is added so your new post won't be included.
+Some cases, the server may return the post before your new post is added so your new post won't be included.
 
 even if you create the post, you know you run the createPost() function before. we're going to mimic a slow server response and I'll show you how that can mess things up.
 

@@ -2,6 +2,8 @@
 last lesson we learnt abt prototype and function costructor - ES5. 
 now in ES6, the same concept is caled classes and objects 
 
+Classes are just syntactical sugar over ES5 code.
+
 https://medium.com/developers-arena/javascript-classes-inheritance-and-prototype-chaining-es5-and-es6-way-4b8e9416702b
 
 we will also learn abt static method - where it is stand alone n doesnt require obj to call
