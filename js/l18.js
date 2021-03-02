@@ -1,4 +1,5 @@
 /**
+1. Replace an element
 https://dev.to/ibn_abubakre/append-vs-appendchild-a4m
 
 */
@@ -19,7 +20,7 @@ const oldHeading = document.getElementById('task-title');
 const cardAction = document.querySelector('.card-action');
 
 //replace the old with new in the parent element of old
-cardAction.replaceChild(newHeading, oldHeading);
+// cardAction.replaceChild(newHeading, oldHeading);
 
 // console.log(newHeading);
 // console.log(oldHeading);

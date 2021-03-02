@@ -17,29 +17,33 @@ console.log(tasktitle);
 //from the elements, u can get more info like innerHTML, innerText, textContent. what r the differences? https://medium.com/better-programming/whats-best-innertext-vs-innerhtml-vs-textcontent-903ebc43a3fc
 
 //shows element with html tags available
-//console.log(tasktitle.innerHTML);
+console.log(tasktitle.innerHTML);
 //returns the “rendered” text content that is shown on browser
-//console.log(tasktitle.innerText);
+console.log(tasktitle.innerText);
 //returns all the text value but tgt with spacing and line breaks u see on the markups
-//console.log(tasktitle.textContent);
+console.log(tasktitle.textContent);
 
 //add styling of this id. how styling done in css is the same here
-tasktitle.style.background = 'green';
-tasktitle.style.color = 'white';
+// tasktitle.style.background = 'green';
+// tasktitle.style.color = 'white';
 
 //with the innerText,texContent, apaart from viewing the specific values, we can  use it to change content. Task -> Task lists
-tasktitle.innerText = 'task lists';
-tasktitle.textContent = 'tasks listsss'; //same as above
+// tasktitle.innerText = 'task lists';
+// tasktitle.textContent = 'tasks listsss'; //same as above
 
-//change the html markup and replace the content. if u dont add content, the content will be empty on the browser
+//add a whole element in the selected element as child element. if u dont add content, the content will be empty on the browser
 tasktitle.innerHTML = '<span style="color:red">dd</span>';
+
+//if u add the same, it will replace the above element
+tasktitle.innerHTML = '<b>ffff</b>';
 
 //  //query selector
 
-console.log(document.querySelector('#task-title')); //by id
-console.log(document.querySelector('.card-title')); //by class
-console.log(document.querySelector('h5')); //by tags
+// console.log(document.querySelector('#task-title')); //by id
+// console.log(document.querySelector('.card-title')); //by class
+// console.log(document.querySelector('h5')); //by tags
 
 //styling using query selector
-document.querySelector('ul li').style.background = 'blue';
-document.querySelector('ul li:last-child').style.background = 'pink';
+// document.querySelector('ul li').style.background = 'blue';
+// document.querySelector('ul li:last-child').style.background = 'pink';
+//

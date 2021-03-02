@@ -1,15 +1,47 @@
-/* we will leearning dom on multiple elements
+/* we will learning dom on single / multiple elements
 
-we have diff ways to get multiple elements, the diff is the return type.
-a) for getElements() the value return is in 'html collections'
+-------------------
+
+.getElementById(String id)
+    Returns an object reference to the identified element.
+.querySelector()
+    Returns the first Element node within the document, in document order, that matches the specified selectors.
+.querySelectorAll()
+    Returns a list of all the Element nodes within the document that match the specified selectors.
+.getElementsByName()
+    Returns a list of elements with the given name
+.getElementsByClassName()
+    Returns a list of elements with the given class name.
+.getElementsByTagName()
+    Returns a list of elements with the given tag name.
+.getElementsByTagNameNS()
+    Returns a list of elements with the given tag name and namespace.
+
+    https://developer.mozilla.org/en-US/docs/Web/API/Document
+
+
+.querySelector & .querySelectorAll....
+--------------------------------------------
+
+
+above are the 2 main ways to get elements, and the diff is the return type.
+one returns nodeList, other returns HTMLCollections.
+
+a) for 'html collections' type:
 so if u wanna use forEach or map, convrt to array first
-b) for querySelector/querySelectorAll, it returns node list so
+
+b) for 'nodeList' type:
 no need to convert to array first if u 1 2 do forEach
 
 to check which return which, simply console.log the return and in console it will 
 show the return type
 
 or. simply hover over the function name to see the return type
+
+if u use a single element query selector for multiple elements, it juust returns the first matching element.
+
+https://www.w3schools.com/js/js_htmldom_elements.asp
+https://www.w3schools.com/jsref/met_document_queryselector.asp
 
 *********************************************************
 querySelector vs querySelectorAll
@@ -28,12 +60,24 @@ Note: The NodeList returned by querySelectorAll() is not live, which means that 
 https://stackoverflow.com/questions/14377590/queryselector-and-queryselectorall-vs-getelementsbyclassname-and-getelementbyid
 */
 
-//grab the list items. this is the whole list items
-const items = document.getElementsByClassName('collection-item');
+const bySingleId = document.getElementById('collection-item');
+// console.log(bySingleId); //returns single html element / nodelist
 
-console.log('getElementsByClassName');
-console.log(items); //print all items
-console.log(items[0]); //or 1 of them
+const bySingleQuery = document.querySelector('.collection-item');
+// console.log(bySingleQuery); //returns single html element / nodelist
+
+const byManyQueries = document.querySelectorAll('.collection-item');
+// console.log(byManyQueries); //returns nodelist
+// console.log(byManyQueries[0]); //or 1 of them
+const byNames = document.getElementsByName('item');
+// console.log(byNames); //returns nodelist
+
+//grab the list of having the class name. this is the whole list of items
+const byClasses = document.getElementsByClassName('collection-item');
+// console.log(byClasses); //returns HTMLCollections
+
+const byTags = document.getElementsByTagName('li');
+// console.log(byTags); //returns HTMLCollections
 
 // method 1 to style all items - for loop
 // for (let i = 0; i < items.length; i++){
@@ -41,22 +85,17 @@ console.log(items[0]); //or 1 of them
 // }
 
 //method 2 to style all items - forEach. must convert to array first!
-let lis = Array.from(items);
-lis.forEach((items) => (items.style.color = 'red'));
+let lis = Array.from(byClasses);
+lis.forEach((byClasses) => (byClasses.style.color = 'red'));
 
 //style 1 of them
-//items[0].style.color = 'blue';
-
-//only by tag name. gives same result as below
-console.log('\ngetElementsByTagName');
-const ulitems2 = document.getElementsByTagName('li');
-console.log(ulitems2);
+//byClasses[0].style.color = 'blue';
 
 //select multiple by tag name. u can also select by class, id, using css selector
-console.log('\nquerySelectorAll');
+// console.log('\nquerySelectorAll');
 const ulitems = document.querySelectorAll('li');
-console.log(ulitems);
+// console.log(ulitems);
 
-//u can also select using css selectors
+//u can querySelectorAll to select based on css properties
 const ulitem3 = document.querySelectorAll('li:nth-child(odd)');
 ulitem3.forEach((li) => (li.style.background = '#f4f4f4'));

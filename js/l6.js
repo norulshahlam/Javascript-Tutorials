@@ -7,7 +7,7 @@ const last = 'lam';
 const full = first + ' ' + last; //add spaces in btwn
 console.log('concat - fullname: ' + full);
 
-//append - change a string by adding another string
+//append - change exisitng string by adding another string
 var first1 = 'handsome';
 first1 += 'boy'; //add to end
 console.log('\nappend - fullname: ' + first1);
@@ -33,6 +33,6 @@ console.log('slice2: ' + slice2);
 
 //Returns the position of the first occurrence of a substring.
 let name1 = 'hello world, welcome to the universe';
-let name2 = 'se'; //change to any part of the name1
-let result1 = name1.indexOf(name2);
+let name2 = 'll';
+let result1 = name1.indexOf(name2); //find which index of the string contains 'll'.
 console.log('\n\n string compare result: ' + result1);

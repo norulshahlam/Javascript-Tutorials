@@ -1,4 +1,9 @@
-/* type conversion & type cohersion */
+/* type conversion & type cohersion
+Process of converting value from one type to another (such as string to number, object to boolean, and so on). 
+Any type, be it primitive or an object, is a valid subject for type coercion. 
+
+https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/
+*/
 
 console.log('**********  to string **********');
 

@@ -6,9 +6,9 @@ comment all and slowly uncommment from the top and open the console
 
 You can traverse in three directions:
 
-Downwards
-Sideways
-Upwards
+Downwards - .childNodes, .children, firstChild == childNodes[0], .lastChild==childNodes[last element]
+Sideways - nextSibling,  previousSibling, nextElementSibling, previousElementSibling
+Upwards - .parentNode, parentElement, .firstElementChild == list.children[0], .lastElementChild==list.children[last element]
 
 https://zellwk.com/blog/dom-traversals/#:~:text=A%20good%20JavaScript%20developer%20needs,an%20element%20from%20another%20element.
 
@@ -19,16 +19,22 @@ The nodes in the collection are sorted as they appear in the source code and can
 Child nodes include elements, text and comments.
 Note: Whitespace inside elements is considered as text, and text is considered as nodes. Comments are also considered as nodes.
 
-The main difference between children and childNodes property is that children work upon elements and childNodes on nodes including non-element nodes like text and comment nodes.
 
+2. .children;
+
+The children property returns a collection of child elements, as an HTMLCollection object.
+
+
+The main difference between children and childNodes property is that children work upon 
+elements and childNodes on nodes including non-element nodes like text and comment nodes.
 
 https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes
 https://www.w3schools.com/jsref/prop_node_childnodes.asp
 https://www.geeksforgeeks.org/what-is-the-difference-between-children-and-childnodes-in-javascript/#:~:text=The%20childNodes%20property%20is%20a,be%20accessed%20using%20index%20numbers.
 
-2. .children;
 
-The children property returns a collection of child elements, as an HTMLCollection object.
+
+
 */
 
 let val;
@@ -36,15 +42,15 @@ let val;
 const list = document.querySelector('ul.collection'); //get whole list thru the parent
 const listItem = document.querySelector('li.collection-item:first-child'); //get 1st list
 
-// console.log(list);
-// console.log(listItem);
+console.log(list);
+console.log(listItem);
 
 /**************** GET CHILD NODE (Downwards) ***********************/
 
-// val = list.childNodes; //get full child nodes from parents - return nodes list
-// val = list.childNodes[0]; //get node from 1st position
-// val = list.childNodes[1].nodeName;
-// val = list.childNodes[0].nodeType;
+val = list.childNodes; //get full child nodes from parents - return nodes list
+val = list.childNodes[0]; //get node from 1st position
+val = list.childNodes[3].nodeName;
+val = list.childNodes[3].nodeType;
 // val = list.firstChild; //same as list.childNodes[0], but this is only for 1st child. u can use the same for .lastChild
 
 /*
@@ -65,8 +71,8 @@ If the node is a comment node, the nodeType property will return 8.
 //  3rd child's 1st child
 // val = list.children[2].children[0];
 
-//u can add an id to it too
-// list.children[2].children[0].id = 'added-into-child-of-child';
+//u can add an id to it too. this is in 3rd list
+list.children[2].children[0].id = 'added-into-child-of-child';
 
 //count how many child does the parent 'ul' has. since there are 5 list under this ul,it should return 5
 // val = list.childElementCount;
@@ -74,8 +80,8 @@ If the node is a comment node, the nodeType property will return 8.
 /**************** GET PARENT NODE (Upwards) ***********************/
 
 //same as .childNode but for child to parent
-// val = listItem.parentNode;
-// val = listItem.parentElement; //returns same as above
+val = listItem.parentNode; //similar to .childNodes but for going upwards
+//val = listItem.parentElement; //similar to .children but for going upwards
 
 // val = listItem.parentElement.parentElement; //go 2 level up - grandparent
 
@@ -99,6 +105,6 @@ If the node is a comment node, the nodeType property will return 8.
 listItem.parentElement.parentElement.parentElement.children[0].children[2].value = 'got cha!';
 
 //once done, we log it!
-val = listItem.parentElement.parentElement.parentElement.children[0].children[2];
+// val = listItem.parentElement.parentElement.parentElement.children[0].children[2];
 
 console.log(val);

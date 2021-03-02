@@ -41,7 +41,7 @@ console.log('in global scope, after function scope: ' + a, b, c + '\n\n');
 //console.log(b2);
 //console.log(c2);
 
-/* we see from above that local scope can access & modify global scope but, data created in function scope is not accesible in global scope */
+/* we see from above that local scope can access & modify global scope but, data created in function scope is not accesible to global scope. to get this accessible to global scope, a 'return' keyword must be used. */
 
 //block scope
 if (true) {

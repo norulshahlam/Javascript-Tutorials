@@ -1,10 +1,11 @@
 /*
-construct html element from js and it to the main page
+create html element from js and push it to the main page
+know that .appendChild add to last child of the parent element
 */
 
 //create li tag
 const li = document.createElement('li');
-
+console.log(li);
 //then add class to it
 li.className = 'collection-item';
 
@@ -27,10 +28,10 @@ link.innerHTML = '<i class="fa fa-remove"></i>';
 link.className = 'delete-item secondary-content';
 
 //now insert 'link' into 'li' as child
- li.append(link);
+li.append(link);
 
-//append li as child to ul. check browser if it is added
+//append li as LAST child of ul. check browser if it is added
 document.querySelector('ul.collection').appendChild(li);
 
 console.log(li);
-console.log(link);
+console.log(Date());
