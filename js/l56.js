@@ -15,7 +15,7 @@ https://stackoverflow.com/questions/24085708/javascript-map-object-vs-set-object
 //1. 1st method - create a Set, later add values
 const set = new Set();
 
-//add values to set
+//add values to set. any duplicate values will not be stored
 set.add(100);
 set.add('string');
 set.add(true);
@@ -26,5 +26,5 @@ set.add(100);
 console.log(set);
 
 //2nd method - creeate Set and add values tgt
-const set2 = new Set([ 1, true, 'this is String', { food: 'apple' } ]);
+const set2 = new Set([1, true, 'this is String', { food: 'apple' }]);
 console.log(set2);

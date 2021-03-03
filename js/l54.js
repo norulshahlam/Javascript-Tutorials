@@ -7,23 +7,24 @@ https://www.freecodecamp.org/news/how-to-use-destructuring-in-javascript-to-writ
 /*******Destructing assignment**************/
 
 //1. Rest pattern with array. 'rest' takes the remaining values
-[ a, b, ...rest ] = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+[a, b, ...rest] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 //2. Rest pattern with object.
-[ ({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40, e: 50, f: 60, g: 70 }) ];
+// [ ({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40, e: 50, f: 60, g: 70 }) ];
 
 console.log(rest);
 
 //3. alternative method = array destructuring
-const people = [ 'amy', 'bob', 'cat' ];
-let [ person1, person2, person3 ] = people;
+const people = ['amy', 'bob', 'cat'];
+let [person1, person2, person3] = people;
 console.log(person1, person2, person3);
 
 //4. parse array returned from function
-function getPeople() {
-	return [ 'apple', 'banana', 'carrot' ];
+function getPeople()
+{
+	return ['apple', 'banana', 'carrot'];
 }
-[ person1, person2, person3 ] = getPeople();
+[person1, person2, person3] = getPeople();
 
 console.log(person1, person2, person3);
 
@@ -32,7 +33,8 @@ const person = {
 	name: 'shah',
 	age: 33,
 	city: 'Singapore',
-	hello: function() {
+	hello: function ()
+	{
 		console.log('hello');
 	}
 };

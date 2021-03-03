@@ -12,6 +12,7 @@ symbols are ignored in json.stringify
 https://flaviocopes.com/javascript-symbols/
 https://stackoverflow.com/questions/21724326/what-is-the-motivation-for-bringing-symbols-to-es6
 
+https://www.w3docs.com/learn-javascript/symbol-types.html
 */
 
 const KEY1 = Symbol();
@@ -31,3 +32,20 @@ myObj.key4 = 'prop4';
 for (let i in myObj) {
   console.log(`${ i }: ${ myObj[i] }`);
 }
+
+console.log(myObj)
+
+/****************using symbol as unique key identifier*************** */
+
+let site = { // belongs to another code
+  name: "W3Docs"
+};
+let id = Symbol("id");
+site[id] = 1;
+console.log(site[id]); // we can access the data using the symbol as the key
+
+/*************symbols are unique********** */
+
+let mySymbol1 = Symbol("mySymbol"); //'mySymbol' is a description
+let mySymbol2 = Symbol("mySymbol");
+console.log(mySymbol1 == mySymbol2); // false
