@@ -12,8 +12,9 @@ https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises
 
 */
 
-/**********************method 1********************** */
 const posts = [ { title: 'Post One', body: 'This is post one' }, { title: 'Post Two', body: 'This is post two' } ];
+
+/**********************method 1********************** */
 
 // function createPost(post) {
 // 	setTimeout(function() {

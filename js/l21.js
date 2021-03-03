@@ -4,12 +4,13 @@ const form = document.querySelector('form');
 const taskInput = document.getElementById('task');
 
 //trigger on submit click
-//form.addEventListener('submit', runEvent);
-//
-//taskInput.addEventListener('keydown', runEvent);
+form.addEventListener('submit', runEvent);
+
+//when keyboard is pressed down
+taskInput.addEventListener('keydown', runEvent);
 
 //when keybaord is released
-//taskInput.addEventListener('keyup', runEvent);
+taskInput.addEventListener('keyup', runEvent);
 
 taskInput.addEventListener('focus', runEvent);
 

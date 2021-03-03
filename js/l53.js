@@ -1,7 +1,7 @@
 /* 
 Symbol is a primitive data type of JavaScript, along with string, number, boolean, null and undefined.
 
-It was introduced in ECMAScript 2015, so just a few years ago.
+It was introduced in ECMAScript 2015.
 
 It’s a very peculiar data type. Once you create a symbol, its value is kept private and for internal use.
 

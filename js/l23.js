@@ -41,7 +41,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
 	if (localStorage.getItem('tasks') === null) {
 		tasks = [];
 	} else {
-		//if have, then add to 'tasks'
+		//if have, then get 'tasks'
 		tasks = JSON.parse(localStorage.getItem('tasks'));
 	}
 
@@ -50,7 +50,10 @@ document.querySelector('form').addEventListener('submit', function(e) {
 	//add tasks into local storage. since we storing in local storage, we must convert from js obj to JSON string
 	localStorage.setItem('tasks', JSON.stringify(tasks));
 	alert(task + ' saved');
+
+	//print to console. convert back json to js obj
+	const tasks1 = JSON.parse(localStorage.getItem('tasks'));
+	console.log(tasks1);
+
 	e.preventDefault();
 });
-//print to console. convert back json to js obj
-const tasks1 = JSON.parse(localStorage.getItem('tasks'));

@@ -3,7 +3,7 @@
 we are displaying user profiles using next(). as long as there are data, it will go to next data. profile data will be hardcoded internal json data. 
 */
 
-const data = [
+const profile = [
 	{
 		name: 'john doe',
 		age: '32',
@@ -31,8 +31,8 @@ const data = [
 ];
 
 
-//iterator this data
-const profiles = profileIterator(data);
+//iterator this profile
+const profiles = profileIterator(profile);
 
 //call 1st profile on page load
 nextProfile();
@@ -41,40 +41,43 @@ nextProfile();
 document.getElementById('next').addEventListener('click', nextProfile);
 
 //next profile display
-function nextProfile() {
+function nextProfile()
+{
 	const currentProfile = profiles.next().value;
 	if (currentProfile != undefined) {
 		document.getElementById('profileDisplay').innerHTML = `
       <ul class="list-group">
-        <li class="list-group-item">Name: ${currentProfile.name}</li>
-        <li class="list-group-item">Age: ${currentProfile.age}</li>
-        <li class="list-group-item">Location: ${currentProfile.location}</li>
-        <li class="list-group-item">Gender: ${currentProfile.gender}</li>
-        <li class="list-group-item">Looking for: ${currentProfile.lookingFor}</li>
+        <li class="list-group-item">Name: ${ currentProfile.name }</li>
+        <li class="list-group-item">Age: ${ currentProfile.age }</li>
+        <li class="list-group-item">Location: ${ currentProfile.location }</li>
+        <li class="list-group-item">Gender: ${ currentProfile.gender }</li>
+        <li class="list-group-item">Looking for: ${ currentProfile.lookingFor }</li>
       </ul>
       `;
 		document.getElementById('imageDisplay').innerHTML = `
-      <img src="${currentProfile.image}">`;
-  }
-  //if there is no more next(), reload page
-  else {
-    window.location.reload();
-  }
+      <img src="${ currentProfile.image }">`;
+	}
+	//if there is no more next(), reload page
+	else {
+		window.location.reload();
+	}
 }
 
-function profileIterator(profiles) {
+function profileIterator(profiles)
+{
 	let nextIndex = 0;
 
 	return {
-		next: function() {
+		next: function ()
+		{
 			return nextIndex < profiles.length
 				? {
-						value: profiles[nextIndex++],
-						done: false
-					}
+					value: profiles[nextIndex++],
+					done: false
+				}
 				: {
-						done: true
-					};
+					done: true
+				};
 		}
 	};
 }

@@ -108,7 +108,7 @@ function clearTasks() {
 	localStorage.clear();
 }
 
-/******************** filter TASK***********************/
+/ ******************** filter TASK***********************/;
 
 function filterTasks(e) {
 	//user input filter field

@@ -14,8 +14,8 @@ https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
 */
 
 /**************** event bubbling *****************/
-/*
-//1. console log 'task list' on click
+
+// 1. console log 'task list' on click
 document.querySelector('.card-title').addEventListener('click', function(e) {
 	console.log('card title');
 });
@@ -33,9 +33,9 @@ document.querySelector('.card').addEventListener('click', function() {
 //2. console log its parent's parents's parents
 document.querySelector('.col').addEventListener('click', function() {
 	console.log('col');
-});*/
+});
 
-/* here we see that the parents will get called too event we only click on 'task-list. this is called event bubbling.
+/* here we see that the parents will get called too even we only click on 'task-list. this is called event bubbling.
 With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements. */
 
 /**************** event delegation *****************/

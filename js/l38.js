@@ -1,7 +1,7 @@
 /*
-Now we're going to start to build our custom Ajax library called Easy HTP.
+Now we're going to start to build our custom Ajax library called Easy HTTP.
 
-Now in order to build this we're going to need something to test with. So we're going to use https://jsonplaceholder.typicode.com/ -- which is a fake online resti API for testing and prototyping.
+Now in order to build this we're going to need something to test with. So we're going to use https://jsonplaceholder.typicode.com/ -- which is a fake online rest API for testing and prototyping.
 
 we are also implementing callback to ensure we do it asynchonously, to ensure we get the response before passing the data 
 */

@@ -13,12 +13,12 @@ https://stackoverflow.com/questions/37124006/iterator-and-a-generator-in-javascr
 function nameIterator(names)
 {
   let nextIndex = 0;
-//this function does print 1 name at a time. but the 2nd timwe u call, it return the 2nd one, until all names are returned.  it wont return anyhting if u call again after all names are called
+  //this function does print 1 name at a time. but the 2nd timwe u call, it return the 2nd one, until all names are returned.  it wont return anyhting if u call again after all names are called
   return {
     next: function ()
     {
       if (nextIndex < names.length) {
-        return {  value: names[nextIndex++], done: false  }
+        return { value: names[nextIndex++], done: false }
       }
       else { return { done: true } }
     }
@@ -46,10 +46,10 @@ function* sayNames()
 }
 
 const name = sayNames();
-// console.log(name.next().value);
-// console.log(name.next().value);
-// console.log(name.next().value);
-// console.log(name.next().value);
+console.log(name.next().value);
+console.log(name.next().value);
+console.log(name.next().value);
+console.log(name.next().value);
 
 
 /**********ID creator *********************/

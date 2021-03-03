@@ -28,7 +28,7 @@ ECMAScript 2017 introduced the JavaScript keywords async and await
 
 //   //cahnge this value to simulate error/success response
 //   const error = false;
-  
+
 //   if (!error) {
 //      const res = await promise; //wait till promise is resolved
 //   return res;
@@ -37,7 +37,7 @@ ECMAScript 2017 introduced the JavaScript keywords async and await
 //     await Promise.reject(new Error('Something went wrong'));
 //   }
 
- 
+
 // }
 // myFunc()
 //   .then(res => console.log(res))
@@ -55,4 +55,7 @@ async function getUsers()
   return data;
 }
 
-getUsers().then(users => console.log(users));
+getUsers().then(users =>
+{
+  users.forEach(user => console.log(user))
+});

@@ -23,12 +23,11 @@ for this lesson we will only focus on 1 event - click.
 */
 
 //creating an event listener
-document.querySelector('.clear-tasks').addEventListener('click', function (/*e*/) //clear task button
-{
-  console.log('clicked');
-  //e.target.innerText = 'hello'; //change the name of the button
-  //e.preventDefault();
-})
+document.querySelector('.clear-tasks').addEventListener('click', function(e) {
+	console.log('clicked');
+	//e.target.innerText = 'hello'; //change the name of the button
+	//e.preventDefault();
+});
 
 /*if u noticed, the console log prints and clears very fast. this is bcos of default behaviour which is also running on click. for this case, in the markup, it is supposed to redirecting to other page - so log gets removed. to overcome this, u can:
 
@@ -41,21 +40,18 @@ document.querySelector('.clear-tasks').addEventListener('click', function (/*e*/
 /* this is more preferred way of adding event listener - use function call instead of directly executing it like the above. also we will be looking at what the 'e' is - event object  */
 document.querySelector('.btn').addEventListener('click', onClick); //add task button
 
-function onClick(e)
-{
-  e.preventDefault();
+function onClick(e) {
+	e.preventDefault();
 
+	console.log(e.target); //check  the target event
+	console.log(e.target.className); //check  the target event
+	console.log(e.type); //check the event type
 
-  console.log(e.target); //check  the target event 
-  console.log(e.target.className); //check  the target event 
-  console.log(e.type); //check the event type
+	e.target.value = 'hello'; //change the name of the button. elements like button uses 'value' for the rendered name while some uses innerText. check the html markup if u not sure.
 
-  e.target.value = 'hello'; //change the name of the button. replace value with innerText if u r using it on other elements
+	console.log('mouse location relative to window');
+	console.log('y-axis: ' + e.clientY + ', x-axis: ' + e.clientX);
 
-  console.log('mouse location relative to window');
-  console.log('y-axis: '+e.clientY+ ', x-axis: '+e.clientX);
-
-  console.log('mouse location relative to element');
-  console.log('y-axis: ' + e.offsetY + ', x-axis: ' + e.offsetX);
-  
+	console.log('mouse location relative to element');
+	console.log('y-axis: ' + e.offsetY + ', x-axis: ' + e.offsetX);
 }

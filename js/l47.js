@@ -1,6 +1,8 @@
 /*
 how to handle error
 how to display the error message
+using throw - your own condition of an error
+create your own type of error
 
 https://www.w3schools.com/js/js_errors.asp
 
@@ -8,11 +10,11 @@ https://www.w3schools.com/js/js_errors.asp
 
 const user = { email: 'sefsefesg' };
 
-//test a block of code for errors.
+//test a block of code for errors. IMPT: if the 1st error is caught, it will jump to 'catch', ignoring the rest of the code inside 'try' so only provide 1 possible error. 
 try {
   myFunc(); //this will give error as there is no func declaration
 
-  if (!user.name) {
+  if (!user.name) { //this is ignored as above code triggers error
     throw 'user has no name';
   }
 }
