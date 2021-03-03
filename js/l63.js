@@ -21,10 +21,40 @@ const ItemCtrl = (function () {
     this.name = name;
     this.calories = calories;
   };
+
+  //data structure / state
+  const data = {
+    items: [
+      { id: 0, name: "Steak dinner", calories: 1200 },
+      { id: 1, name: "Cookie", calories: 400 },
+      { id: 2, name: "Eggs", calories: 300 },
+    ],
+    currentItem: null,
+    totalCalories: 0,
+  };
+
+  return {
+    logData: function () {
+      return data;
+    },
+  };
 })();
 
 //ui controller
-const UICtrl = (function () {})();
+const UICtrl = (function () {
+  //public methods
+  return {};
+})();
 
 //app controller - main controller that initialize other controllers
-const AppCtrl = (function (ItemCtrl, UICtrl) {})(ItemCtrl, UICtrl);
+const AppCtrl = (function (ItemCtrl, UICtrl) {
+  //public methods
+  return {
+    init: function () {
+      console.log("initializing app...");
+    },
+  };
+})(ItemCtrl, UICtrl);
+
+//initialize app
+AppCtrl.init();
