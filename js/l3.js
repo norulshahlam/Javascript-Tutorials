@@ -33,13 +33,20 @@ var b = a;
 a = 2;
 //sconsole.log('changed val of a. now a is: ' + a + ', b is: ' + b);
 
-
 /***************reference datatype************* */
-var x = { name: 'a' };
+var x = { name: "apple" };
 var y = x;
 
-console.log('\n\n x is: ' + x.name + ', y is: ' + y.name);
+console.log("\n\n x is: " + x.name + ", y is: " + y.name);
 
-//now when we change the value of 'y', this changes 'x' as it is reference type. same thing will happen when we change x too. 
-y.name = 'b';
-console.log('\n\n x is: ' + x.name + ', y is: ' + y.name);
+//now when we change the value of 'y', this changes 'x' as it is reference type. same thing will happen when we change x too.
+y.name = "banana";
+console.log("\n\n x is: " + x.name + ", y is: " + y.name); //both returns banana
+
+//if u 1 2 copy an obj with values, not its reference, or avoiding this problems, use rest operator
+
+var x = { name: "apple" };
+var y = { ...x };
+console.log(y.name); //apple
+x.name = "banana";
+console.log(y.name); //still returns apple
