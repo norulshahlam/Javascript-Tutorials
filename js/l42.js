@@ -3,7 +3,7 @@ we will recreate the easy HTP library (l38) that we created using fetch and usin
 
 UPDATE: this is from lesson 40  where we creeate a fetch api. now we only implementing the arrow function, making the code clean and easy to maange
 */
-
+ 
 document.getElementById('button1').addEventListener('click', getText);
 document.getElementById('button2').addEventListener('click', getJson);
 document.getElementById('button3').addEventListener('click', getExternal);
